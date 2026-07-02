@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Horizon Technologies</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* CSS WILL BE ADDED IN PART 1B */
+/* ===============================
+   GLOBAL STYLES
+================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#0066cc;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+section{
+padding:70px 8%;
+}
+
+h2{
+text-align:center;
+color:#0066cc;
+font-size:2.2rem;
+margin-bottom:30px;
+}
+
+p{
+text-align:center;
+}
+
+/* ===============================
+   HERO
+================================= */
+
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80") center center/cover;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,.70);
+display:flex;
+flex-direction:column;
+}
+
+/* ===============================
+   NAVIGATION
+================================= */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#0066cc;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#0066cc;
+font-weight:600;
+transition:.4s;
+}
+
+.nav-links a:hover{
+color:#ff1493;
+}
+
+.menu-btn{
+display:none;
+font-size:30px;
+cursor:pointer;
+color:#0066cc;
+}
+
+/* ===============================
+   HERO CONTENT
+================================= */
+
+.hero-content{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:60px;
+color:#0066cc;
+margin-bottom:20px;
+animation:fadeDown 1.5s;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:35px;
+color:#0066cc;
+}
+
+.hero-btn{
+padding:15px 40px;
+background:#ff1493;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:18px;
+transition:.4s;
+}
+
+.hero-btn:hover{
+background:#0066cc;
+transform:scale(1.05);
+}
+
+/* ===============================
+   MARQUEE
+================================= */
+
+.marquee-section{
+background:white;
+padding:12px 0;
+overflow:hidden;
+}
+
+.marquee{
+white-space:nowrap;
+overflow:hidden;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+font-size:22px;
+font-weight:700;
+color:#d63384;
+animation:marquee 20s linear infinite;
+}
+
+/* ===============================
+   ABOUT
+================================= */
+
+.about{
+background:white;
+}
+
+.about p{
+max-width:900px;
+margin:20px auto;
+font-size:18px;
+color:#0066cc;
+}
+
+/* ===============================
+   SERVICES
+================================= */
+
+.services{
+background:white;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.service-card{
+background:white;
+border:2px solid #0066cc;
+border-radius:15px;
+padding:35px;
+cursor:pointer;
+transition:.4s;
+text-align:center;
+}
+
+.service-card:hover{
+background:#0066cc;
+color:white;
+transform:translateY(-10px);
+}
+
+.service-card i{
+font-size:50px;
+margin-bottom:20px;
+color:#ff1493;
+}
+
+.service-card:hover i{
+color:white;
+}
+  
+ .service-card:hover i{
+color:white;
+}
+  
+/* ===============================
+   SUB SERVICES
+================================= */
+
+#subServices{
+margin-top:40px;
+display:none;
+animation:fadeIn .6s ease;
+}
+
+.sub-title{
+text-align:center;
+font-size:30px;
+font-weight:700;
+color:#0066cc;
+margin-bottom:30px;
+}
+
+.sub-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.sub-card{
+background:#ffffff;
+border:2px solid #ff1493;
+border-radius:15px;
+padding:25px;
+text-align:center;
+transition:.4s;
+animation:zoomIn .5s ease;
+}
+
+.sub-card:hover{
+background:#ff1493;
+color:#ffffff;
+transform:translateY(-8px);
+}
+
+.sub-card h3{
+margin-bottom:15px;
+font-size:22px;
+}
+
+.sub-card p{
+font-size:15px;
+margin-bottom:20px;
+}
+
+.book-btn{
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#0066cc;
+color:#ffffff;
+font-size:16px;
+cursor:pointer;
+transition:.4s;
+}
+
+.book-btn:hover{
+background:#ff1493;
+transform:scale(1.05);
+}
+  
+/* ===============================
+   POPUP WINDOW
+================================= */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeIn .4s ease;
+}
+
+.popup-content{
+width:90%;
+max-width:500px;
+background:#ffffff;
+border-radius:18px;
+padding:30px;
+position:relative;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+animation:zoomIn .4s ease;
+}
+
+.popup-content h2{
+color:#0066cc;
+margin-bottom:25px;
+}
+
+.close{
+position:absolute;
+top:12px;
+right:20px;
+font-size:30px;
+font-weight:bold;
+cursor:pointer;
+color:#ff1493;
+transition:.3s;
+}
+
+.close:hover{
+transform:rotate(90deg);
+color:#0066cc;
+}
+
+.popup-content input{
+width:100%;
+padding:14px;
+margin:12px 0;
+border:2px solid #0066cc;
+border-radius:10px;
+font-size:16px;
+outline:none;
+transition:.3s;
+}
+
+.popup-content input:focus{
+border-color:#ff1493;
+}
+
+.popup-content input[readonly]{
+background:#f7f7f7;
+color:#0066cc;
+font-weight:600;
+}
+
+.popup-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.popup-buttons button{
+padding:14px 25px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+color:#ffffff;
+transition:.3s;
+}
+
+.popup-buttons button:first-child{
+background:#25D366;
+}
+
+.popup-buttons button:last-child{
+background:#0066cc;
+}
+
+.popup-buttons button:hover{
+transform:translateY(-4px);
+opacity:.9;
+}
+
+.popup-buttons i{
+margin-right:8px;
+}
+  
+/* ===============================
+   REVIEWS SECTION
+================================= */
+
+.reviews{
+background:#ffffff;
+overflow:hidden;
+}
+
+.review-container{
+width:100%;
+overflow:hidden;
+position:relative;
+margin-top:35px;
+}
+
+.review-track{
+display:flex;
+width:max-content;
+animation:scrollReviews 30s linear infinite;
+}
+
+.review-card{
+width:320px;
+min-width:320px;
+margin:15px;
+padding:25px;
+background:#ffffff;
+border:2px solid #0066cc;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+border-color:#ff1493;
+}
+
+.review-card img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #ff1493;
+margin-bottom:15px;
+}
+
+.review-card h3{
+color:#0066cc;
+margin-bottom:10px;
+}
+
+.review-card p:first-of-type{
+font-size:20px;
+color:#ff1493;
+margin-bottom:10px;
+}
+
+.review-card p:last-of-type{
+font-size:15px;
+color:#0066cc;
+}
+
+/* ===============================
+   CONTACT SECTION
+================================= */
+
+.contact{
+background:#ffffff;
+text-align:center;
+}
+
+.contact p{
+margin-bottom:30px;
+font-size:18px;
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+width:65px;
+height:65px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+border-radius:50%;
+background:#0066cc;
+color:#ffffff;
+font-size:28px;
+transition:.4s;
+}
+
+.social-links a:hover{
+background:#ff1493;
+transform:scale(1.15) rotate(8deg);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer{
+background:#0066cc;
+padding:20px;
+text-align:center;
+}
+
+footer p{
+color:#ffffff;
+font-size:16px;
+}
+  
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width:1200px){
+
+.service-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.hero-content h1{
+font-size:50px;
+}
+
+}
+
+@media (max-width:992px){
+
+section{
+padding:60px 6%;
+}
+
+.service-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:20px;
+}
+
+.review-card{
+width:300px;
+min-width:300px;
+}
+
+}
+
+@media (max-width:768px){
+
+nav{
+flex-wrap:wrap;
+position:relative;
+}
+
+.menu-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+width:100%;
+background:#ffffff;
+margin-top:20px;
+padding:20px 0;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links li{
+text-align:center;
+margin:10px 0;
+}
+
+.hero{
+height:85vh;
+}
+
+.hero-content h1{
+font-size:34px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.hero-btn{
+padding:12px 28px;
+font-size:16px;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.sub-grid{
+grid-template-columns:1fr;
+}
+
+.popup-content{
+width:95%;
+padding:25px;
+}
+
+.popup-buttons{
+flex-direction:column;
+}
+
+.popup-buttons button{
+width:100%;
+}
+
+.review-card{
+width:270px;
+min-width:270px;
+}
+
+.social-links{
+gap:18px;
+}
+
+.social-links a{
+width:55px;
+height:55px;
+font-size:24px;
+}
+
+}
+
+@media (max-width:480px){
+
+section{
+padding:50px 5%;
+}
+
+h2{
+font-size:28px;
+}
+
+.hero-content h1{
+font-size:28px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.about p{
+font-size:16px;
+}
+
+.service-card{
+padding:25px;
+}
+
+.service-card h3{
+font-size:20px;
+}
+
+.sub-card{
+padding:20px;
+}
+
+.review-card{
+width:240px;
+min-width:240px;
+padding:20px;
+}
+
+.review-card img{
+width:75px;
+height:75px;
+}
+
+.marquee span{
+font-size:18px;
+}
+
+footer p{
+font-size:14px;
+}
+
+}
+  
+/* ===============================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes zoomIn{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@keyframes marquee{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-100%);
+}
+}
+
+@keyframes scrollReviews{
+0%{
+transform:translateX(100%);
+}
+100%{
+transform:translateX(-100%);
+}
+}
+
+/* ===============================
+   SMOOTH TRANSITIONS
+================================= */
+
+.service-card,
+.sub-card,
+.review-card,
+.hero-btn,
+.book-btn,
+.social-links a,
+.popup-content,
+.popup-buttons button{
+transition:all .35s ease;
+}
+
+/* ===============================
+   CUSTOM SCROLLBAR
+================================= */
+
+::-webkit-scrollbar{
+width:10px;
+height:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#ffffff;
+}
+
+::-webkit-scrollbar-thumb{
+background:#0066cc;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#ff1493;
+}
+
+/* ===============================
+   TEXT SELECTION
+================================= */
+
+::selection{
+background:#ff1493;
+color:#ffffff;
+}
+
+/* ===============================
+   INPUT PLACEHOLDERS
+================================= */
+
+input::placeholder{
+color:#888888;
+}
+
+/* ===============================
+   BUTTON ACTIVE EFFECT
+================================= */
+
+.hero-btn:active,
+.book-btn:active,
+.popup-buttons button:active{
+transform:scale(.96);
+}  
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home" class="hero">
+
+<div class="overlay">
+
+<!-- Navigation -->
+
+<nav>
+ 
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About Us</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#reviews">Reviews</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
+</div>
+
+</nav>
+
+<!-- Hero Text -->
+
+<div class="hero-content">
+
+<h1>
+
+Horizon Technologies
+
+</h1>
+
+<p>
+
+Innovative Digital Solutions For Modern Businesses
+
+</p>
+
+<a href="#services" class="hero-btn">
+
+Explore Services
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SCROLLING MOTTO ================= -->
+
+<section class="marquee-section">
+
+<div class="marquee">
+
+<span>
+
+Diverse Technological Solutions with limitless possibilities •
+
+Diverse Technological Solutions with limitless possibilities •
+
+Diverse Technological Solutions with limitless possibilities •
+
+Diverse Technological Solutions with limitless possibilities •
+
+</span>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about" class="about">
+
+<h2>
+
+About Us
+
+</h2>
+
+<p>
+
+Horizon Technologies is a modern technology company dedicated to providing innovative, reliable, and affordable digital solutions to individuals, organizations, businesses, schools, and institutions. We combine creativity, technical expertise, and professionalism to deliver services that empower our clients through technology.
+
+</p>
+
+<p>
+
+From software development and branding to networking, tutoring, computer packages, and data analysis, our mission is to provide diverse technological solutions with limitless possibilities while ensuring quality, efficiency, and customer satisfaction.
+
+</p>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="services">
+
+<h2>
+
+Our Services
+
+</h2>
+
+<div class="service-grid">
+
+<!-- SOFTWARE -->
+
+<div class="service-card"
+onclick="showService('software')">
+
+<i class="fas fa-code"></i>
+
+<h3>
+
+Software Development
+
+</h3>
+
+</div>
+
+<!-- BRANDING -->
+
+<div class="service-card"
+onclick="showService('branding')">
+
+<i class="fas fa-bullhorn"></i>
+
+<h3>
+
+Branding
+
+</h3>
+
+</div>
+
+<!-- GRAPHICS -->
+
+<div class="service-card"
+onclick="showService('graphics')">
+
+<i class="fas fa-palette"></i>
+
+<h3>
+
+Graphic Design
+
+</h3>
+
+</div>
+
+<!-- TUTORING -->
+
+<div class="service-card"
+onclick="showService('tutoring')">
+
+<i class="fas fa-chalkboard-teacher"></i>
+
+<h3>
+
+Tutoring
+
+</h3>
+
+</div>
+
+<!-- COMPUTER PACKAGES -->
+
+<div class="service-card"
+onclick="showService('packages')">
+
+<i class="fas fa-desktop"></i>
+
+<h3>
+
+Computer Packages
+
+</h3>
+
+</div>
+
+<!-- DATA ANALYSIS -->
+
+<div class="service-card"
+onclick="showService('analysis')">
+
+<i class="fas fa-chart-line"></i>
+
+<h3>
+
+Data Analysis
+
+</h3>
+
+</div>
+
+<!-- NETWORKING -->
+
+<div class="service-card"
+onclick="showService('networking')">
+
+<i class="fas fa-network-wired"></i>
+
+<h3>
+
+Computer Networking
+
+</h3>
+
+</div>
+
+</div>
+
+<!-- SUB SERVICES WILL COME HERE -->
+
+<div id="subServices">
+
+<!-- JavaScript inserts services here -->
+
+</div>
+
+</section>
+  
+ 
+<!-- ================= TESTIMONIALS ================= -->
+
+<section id="reviews" class="reviews">
+
+<h2>What Our Clients Say</h2>
+
+<div class="review-container">
+
+<div class="review-track">
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+
+<h3>Mary Wanjiku</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"Horizon Technologies developed our company management system professionally and on time. Their support is excellent."
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<h3>John Kamau</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"The branding package transformed our business image. We highly recommend Horizon Technologies."
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/women/62.jpg">
+
+<h3>Faith Atieno</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"The computer packages training was practical, engaging and very affordable."
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/men/81.jpg">
+
+<h3>Peter Mwangi</h3>
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"The networking installation was completed professionally with reliable after-service support."
+
+</p>
+
+</div>
+
+<!-- Duplicate Cards for Smooth Infinite Scroll -->
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+
+<h3>Mary Wanjiku</h3>
+
+<p>★★★★★</p>
+
+<p>
+
+"Horizon Technologies developed our company management system professionally and on time."
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<h3>John Kamau</h3>
+
+<p>★★★★★</p>
+
+<p>
+
+"The branding package transformed our business image."
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<p>
+
+Reach us through our social media platforms.
+
+</p>
+
+<div class="social-links">
+
+<a href="https://wa.me/254794939065"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a href="https://facebook.com/HorizonT34"
+target="_blank">
+
+<i class="fab fa-facebook"></i>
+
+</a>
+
+<a href="#"
+target="_blank">
+
+<i class="fab fa-x-twitter"></i>
+
+</a>
+
+<a href="https://tiktok.com/@horizont072"
+target="_blank">
+
+<i class="fab fa-tiktok"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= POPUP ================= -->
+
+<div id="popup" class="popup">
+
+<div class="popup-content">
+
+<span class="close"
+onclick="closePopup()">
+
+&times;
+
+</span>
+
+<h2>
+
+Book / Inquiry
+
+</h2>
+
+<form id="bookingForm">
+
+<input
+type="text"
+id="customerName"
+placeholder="Enter Your Name"
+required>
+
+<input
+type="text"
+id="mainService"
+readonly>
+
+<input
+type="text"
+id="subService"
+readonly>
+
+  <textarea
+id="customerMessage"
+placeholder="Describe your request (optional)"
+rows="4">
+</textarea>
+  
+<div class="popup-buttons">
+
+<button
+type="button"
+onclick="sendWhatsApp()">
+
+<i class="fab fa-whatsapp"></i>
+
+WhatsApp
+
+</button>
+
+<button
+type="button"
+onclick="sendEmail()">
+
+<i class="fas fa-envelope"></i>
+
+Gmail
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© <span id="year"></span>
+
+Horizon Technologies®.
+
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+/* JavaScript will be added in Part 2 */
+/* =====================================
+   MOBILE MENU
+===================================== */
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+/* Close menu after clicking a link */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+/* =====================================
+   AUTO FOOTER YEAR
+===================================== */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+/* =====================================
+   SERVICES DATA
+===================================== */
+
+const services = {
+
+software:{
+
+title:"Software Development",
+
+items:[
+
+"Website Development",
+
+"School Management Systems",
+
+"Hospital Management Systems",
+
+"Business Management Systems",
+
+"Inventory Management Systems",
+
+"Payroll Systems",
+
+"Mobile App Development",
+
+"E-Commerce Websites",
+
+"Database Development",
+
+"System Maintenance"
+
+]
+
+},
+
+branding:{
+
+title:"Branding",
+
+items:[
+
+"Logo Design",
+
+"Company Profile",
+
+"Business Cards",
+
+"Letterheads",
+
+"Corporate Identity",
+
+"Product Branding",
+
+"Packaging Design",
+
+"Roll-up Banners",
+
+"Brochures",
+
+"Flyers"
+
+]
+
+},
+
+graphics:{
+
+title:"Graphic Design",
+
+items:[
+
+"Posters",
+
+"Certificates",
+
+"Invitation Cards",
+
+"Wedding Cards",
+
+"Funeral Programs",
+
+"Calendars",
+
+"Social Media Graphics",
+
+"Photo Editing",
+
+"Book Covers",
+
+"Banners"
+
+]
+
+},
+
+tutoring:{
+
+title:"Tutoring",
+
+items:[
+
+"Programming",
+
+"Web Design",
+
+"Python",
+
+"Java",
+
+"C++",
+
+"Database Systems",
+
+"Networking",
+
+"ICT Consultancy",
+
+"Research Guidance",
+
+"Project Supervision"
+
+]
+
+},
+
+packages:{
+
+title:"Computer Packages",
+
+items:[
+
+"Introduction to Computers",
+
+"Microsoft Word",
+
+"Microsoft Excel",
+
+"Microsoft PowerPoint",
+
+"Microsoft Access",
+
+"Publisher",
+
+"Internet",
+
+"Typing Skills",
+
+"Email",
+
+"Printing"
+
+]
+
+},
+
+analysis:{
+
+title:"Data Analysis",
+
+items:[
+
+"SPSS",
+
+"STATA",
+
+"R",
+
+"Python Analysis",
+
+"Excel Analysis",
+
+"Questionnaire Coding",
+
+"Data Cleaning",
+
+"Research Analysis",
+
+"Report Writing",
+
+"Visualization"
+
+]
+
+},
+
+networking:{
+
+title:"Computer Networking",
+
+items:[
+
+"LAN Installation",
+
+"WAN Installation",
+
+"WiFi Installation",
+
+"Router Configuration",
+
+"Switch Configuration",
+
+"Network Troubleshooting",
+
+"CCTV Installation",
+
+"Server Installation",
+
+"Fiber Networking",
+
+"Maintenance"
+
+]
+
+}
+
+};
+  
+  /* =====================================
+   SHOW SUB-SERVICES
+===================================== */
+
+const subServices = document.getElementById("subServices");
+const serviceGrid = document.querySelector(".service-grid");
+
+function showService(serviceKey){
+
+const service = services[serviceKey];
+
+serviceGrid.style.display = "none";
+subServices.style.display = "block";
+
+let html = "";
+
+html += `
+<div class="sub-title">
+${service.title}
+</div>
+
+<div class="sub-grid">
+`;
+
+service.items.forEach(item=>{
+
+html += `
+
+<div class="sub-card">
+
+<h3>${item}</h3>
+
+<p>
+
+Professional ${item.toLowerCase()} services tailored to your needs.
+
+</p>
+
+<button
+class="book-btn"
+onclick="openPopup('${service.title}','${item}')">
+
+Book / Inquire
+
+</button>
+
+</div>
+
+`;
+
+});
+
+html += `
+
+</div>
+
+<div style="
+text-align:center;
+margin-top:40px;">
+
+<button
+class="book-btn"
+onclick="backToServices()">
+
+← Back to Services
+
+</button>
+
+</div>
+
+`;
+
+subServices.innerHTML = html;
+
+window.scrollTo({
+
+top:document.getElementById("services").offsetTop-20,
+
+behavior:"smooth"
+
+});
+
+}
+
+/* =====================================
+   BACK TO MAIN SERVICES
+===================================== */
+
+function backToServices(){
+
+subServices.style.display="none";
+
+serviceGrid.style.display="grid";
+
+window.scrollTo({
+
+top:document.getElementById("services").offsetTop-20,
+
+behavior:"smooth"
+
+});
+
+}
+  
+  /* =====================================
+   POPUP FUNCTIONS
+===================================== */
+
+const popup = document.getElementById("popup");
+const customerName = document.getElementById("customerName");
+const mainService = document.getElementById("mainService");
+const subService = document.getElementById("subService");
+
+function openPopup(main, sub){
+
+    customerName.value = "";
+    mainService.value = main;
+    subService.value = sub;
+
+    popup.style.display = "flex";
+}
+
+function closePopup(){
+
+    popup.style.display = "none";
+
+}
+
+/* =====================================
+   CLOSE POPUP WHEN CLICKING OUTSIDE
+===================================== */
+
+window.addEventListener("click", function(e){
+
+    if(e.target === popup){
+
+        closePopup();
+
+    }
+
+});
+
+/* =====================================
+   SEND VIA WHATSAPP
+===================================== */
+
+function sendWhatsApp(){
+
+    const name = customerName.value.trim();
+
+    if(name === ""){
+
+        alert("Please enter your name.");
+
+        customerName.focus();
+
+        return;
+
+    }
+
+    const phone = "254794939065";   // Replace with your WhatsApp number
+
+    const message =
+`Hello Horizon Technologies,
+
+My name is ${name}.
+
+I would like to inquire/book the following service:
+
+Main Service: ${mainService.value}
+
+Sub-Service: ${subService.value}
+
+Kindly assist me. Thank you.`;
+
+    window.open(
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+
+}
+
+/* =====================================
+   SEND VIA GMAIL
+===================================== */
+
+function sendEmail(){
+
+    const name = customerName.value.trim();
+
+    if(name === ""){
+
+        alert("Please enter your name.");
+
+        customerName.focus();
+
+        return;
+
+    }
+
+    const email = "horitechie@gmail.com"; // Replace with your Gmail
+
+    const subject =
+"Service Inquiry - " + subService.value;
+
+    const body =
+`Hello Horizon Technologies,
+
+My name is ${name}.
+
+I would like to inquire/book the following service.
+
+Main Service:
+${mainService.value}
+
+Sub-Service:
+${subService.value}
+
+Please get back to me.
+
+Thank you.`;
+
+    window.location.href =
+"mailto:" +
+email +
+"?subject=" +
+encodeURIComponent(subject) +
+"&body=" +
+encodeURIComponent(body);
+
+}
+
+/* =====================================
+   OPTIONAL: ESC KEY CLOSES POPUP
+===================================== */
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        closePopup();
+
+    }
+
+});
+</script>
+
+</body>
+
+</html>
+
+
